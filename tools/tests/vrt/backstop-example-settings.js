@@ -6,7 +6,7 @@
 
 const { partials } = require('../../pl-paths.js');
 
-const plRoot = 'http://0.0.0.0:8080/app-pl/pl';
+const plRoot = 'http://0.0.0.0:8080/app-node-pl/pl';
 
 module.exports = () => {
   // Set which resolutions to take screenshots at.
@@ -39,7 +39,7 @@ module.exports = () => {
   };
 
   // Set which pages to capture, and how to label them.
-  const scenarios = partials.map(partial => {
+  const scenarios = partials.map((partial) => {
     return {
       label: partial,
       url: `${plRoot}?p=${partial}`,
