@@ -46,11 +46,25 @@ function particle_form_alter(&$form, FormStateInterface $form_state, $form_id) {
       // Set the title to invisible, which applies visually-hidden class for
       // screen reader.
       $form['keywords']['#title_display'] = 'invisible';
+      // Add the Bootstrap class needed for input fields.
+      $form['keywords']['#attributes']['class'] = ['form-control'];
+      // Add the Bootstrap class to our Input button.
+      $form['actions']['submit']['#attributes']['class'] = [
+        'btn',
+        'btn-outline-success',
+      ];
       break;
 
     case 'search-block-form':
       // For Drupal's built-in Search, add classes.
       // $form['keys'] is the renderable array for Drupal's built-in Search
       // input field.
+      // Add the Bootstrap class needed for input fields.
+      $form['keys']['#attributes']['class'] = ['form-control'];
+      // Add the Bootstrap class to our Input button.
+      $form['actions']['submit']['#attributes']['class'] = [
+        'btn',
+        'btn-outline-success',
+      ];
   }
 }

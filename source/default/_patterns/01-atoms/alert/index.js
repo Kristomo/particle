@@ -2,6 +2,7 @@
  * Alert
  */
 
+import 'bootstrap/js/dist/alert';
 
 // Module Dependencies
 import 'protons';

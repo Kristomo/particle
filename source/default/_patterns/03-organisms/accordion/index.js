@@ -2,6 +2,7 @@
  * Accordion
  */
 
+import 'bootstrap/js/dist/collapse';
 
 // Module dependencies
 import 'protons';

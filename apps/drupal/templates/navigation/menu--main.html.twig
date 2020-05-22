@@ -44,6 +44,7 @@
 
         {% for item in items %}
 
+          {# Sync Drupal and Bootstrap's active state classes. #}
           {% set item_classes = [
             item.in_active_trail ? 'active',
           ] %}

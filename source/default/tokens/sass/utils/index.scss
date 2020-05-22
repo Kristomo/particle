@@ -23,4 +23,15 @@
 ///   }
 @forward 'mixins' as m-*;
 
-
+/// Bootstrap variables, functions, mixins
+/// @example - Access ANYTHING exposed by Bootstrap Sass
+///   @use 'sass:map';
+///   @use '~tokens/sass/utils';
+///   .important-thing {
+///     background-color: utils.bs-theme-color('primary');
+///     margin-top: map.get(utils.$bs-spacers, 3);
+///     @include utils.bs-media-breakpoint-up(sm) {
+///       background: utils.bs-theme-color('secondary');
+///     }
+///   }
+@forward '../libraries/bootstrap/utils' as bs-*;
